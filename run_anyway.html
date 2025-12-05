@@ -1,0 +1,118 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sportika — Run Anyway</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold fs-3" href="index.html">Sportika</a>
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navmenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navmenu">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+                    <li class="nav-item"><a href="men.html" class="nav-link">Men</a></li>
+                    <li class="nav-item"><a href="women.html" class="nav-link">Women</a></li>
+                    <li class="nav-item"><a href="kids.html" class="nav-link">Kids</a></li>
+                    <li class="nav-item"><a href="most_selling.html" class="nav-link">Most Selling</a></li>
+                    <li class="nav-item ms-3">
+                        <a href="cart.html" class="nav-link fw-bold">
+                            Cart (<span id="cartCount">0</span>)
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="py-5">
+        <div class="container">
+            <h2 class="fw-bold mb-4">Run Anyway</h2>
+            <div class="row g-4">
+                <!-- Product 1 -->
+                <div class="col-md-4">
+                    <div class="card product-card shadow-sm">
+                        <img src="runningshoe1.jpeg" alt="Run Pro 1">
+                        <div class="card-body text-center">
+                            <h5>Run Pro 1</h5>
+                            <p>$100</p>
+                            <a href="#" class="add-to-cart" data-name="Run Pro 1" data-price="100">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 2 -->
+                <div class="col-md-4">
+                    <div class="card product-card shadow-sm">
+                        <img src="runningshoe2.jpeg" alt="Run Max">
+                        <div class="card-body text-center">
+                            <h5>Run Max</h5>
+                            <p>$120</p>
+                            <a href="#" class="add-to-cart" data-name="Run Max" data-price="120">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 3 -->
+                <div class="col-md-4">
+                    <div class="card product-card shadow-sm">
+                        <img src="runningshoe3.jpeg" alt="Speed Runner">
+                        <div class="card-body text-center">
+                            <h5>Speed Runner</h5>
+                            <p>$90</p>
+                            <a href="#" class="add-to-cart" data-name="Speed Runner" data-price="90">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 4 -->
+                <div class="col-md-4">
+                    <div class="card product-card shadow-sm">
+                        <img src="runningshoe4.jpeg" alt="Urban Runner">
+                        <div class="card-body text-center">
+                            <h5>Urban Runner</h5>
+                            <p>$110</p>
+                            <a href="#" class="add-to-cart" data-name="Urban Runner" data-price="110">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 5 -->
+                <div class="col-md-4">
+                    <div class="card product-card shadow-sm">
+                        <img src="runningshoe5.jpeg" alt="Trail Blazer">
+                        <div class="card-body text-center">
+                            <h5>Trail Blazer</h5>
+                            <p>$130</p>
+                            <a href="#" class="add-to-cart" data-name="Trail Blazer" data-price="130">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 6 -->
+                <div class="col-md-4">
+                    <div class="card product-card shadow-sm">
+                        <img src="runningshoe6.jpeg" alt="Run Elite">
+                        <div class="card-body text-center">
+                            <h5>Run Elite</h5>
+                            <p>$140</p>
+                            <a href="#" class="add-to-cart" data-name="Run Elite" data-price="140">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-4 bg-light">
+        <div class="container text-center">
+            <small>© Sportika — University Project</small>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="cart.js"></script>
+</body>
+</html>

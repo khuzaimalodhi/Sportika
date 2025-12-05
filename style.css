@@ -1,0 +1,248 @@
+﻿
+/* ==================== GENERAL RESET ==================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background: #fff;
+    color: #222;
+}
+
+
+
+/* ==================== NAVBAR ==================== */
+.navbar {
+    padding: 15px 50px;
+    background: #fff;
+}
+
+    .navbar .nav-link {
+        font-weight: 600;
+        transition: 0.3s;
+    }
+
+        .navbar .nav-link:hover {
+            color: #f39c12;
+        }
+
+/* ==================== HERO SECTION ==================== */
+.hero-section {
+    height: 90vh;
+    background: url("banner.jpg") center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+.hero-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.55);
+    top: 0;
+    left: 0;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+    .hero-content h1 {
+        font-size: 4rem;
+        font-weight: 800;
+    }
+
+    .hero-content p {
+        font-size: 1.3rem;
+        margin-bottom: 25px;
+    }
+
+/* ==================== FULL WIDTH CATEGORY ==================== */
+.full-category {
+    position: relative;
+    height: 500px;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+}
+
+    .full-category img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform .3s ease;
+    }
+
+    .full-category:hover img {
+        transform: scale(1.05);
+    }
+
+    .full-category .overlay {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.35);
+        top: 0;
+        left: 0;
+    }
+
+    .full-category .content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #fff;
+        text-align: center;
+    }
+
+        .full-category .content h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+
+        .full-category .content p {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+        }
+
+        .full-category .content a {
+            background: #111;
+            color: #fff;
+            padding: 10px 25px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+            .full-category .content a:hover {
+                background: #f39c12;
+            }
+
+/* ==================== SMALL CATEGORY CARDS ==================== */
+.category-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    transition: transform .3s ease, box-shadow .3s;
+}
+
+    .category-card img {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+    }
+
+    .category-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    .category-card .card-body h5 {
+        font-weight: 600;
+    }
+
+    .category-card .card-body a {
+        background: #111;
+        color: #fff;
+        padding: 7px 15px;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: 0.3s;
+    }
+
+        .category-card .card-body a:hover {
+            background: #f39c12;
+        }
+
+/* ==================== PRODUCT CARDS ==================== */
+.product-card {
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    transition: transform .3s ease, box-shadow .3s;
+}
+
+    .product-card img {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+    }
+
+    .product-card h4 {
+        padding: 10px;
+        font-size: 18px;
+        font-weight: 600;
+    }
+
+    .product-card p {
+        padding: 0 10px 10px;
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    .product-card button {
+        background: #111;
+        color: #fff;
+        border: none;
+        padding: 10px 15px;
+        width: 100%;
+        cursor: pointer;
+        font-weight: 600;
+        transition: 0.3s;
+    }
+
+        .product-card button:hover {
+            background: #f39c12;
+        }
+
+/* ==================== FOOTER ==================== */
+footer {
+    margin-top: 50px;
+    background: #111;
+    color: #fff;
+    text-align: center;
+    padding: 20px 50px;
+}
+
+    footer p,
+    footer small {
+        font-size: 14px;
+    }
+
+/* ==================== RESPONSIVE ==================== */
+@media(max-width: 1024px) {
+    .hero-section {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media(max-width: 768px) {
+    .navbar .nav-links {
+        display: none;
+        flex-direction: column;
+        background: #111;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 200px;
+    }
+
+    .full-category {
+        flex-direction: column;
+        height: 400px;
+    }
+}

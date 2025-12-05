@@ -1,0 +1,417 @@
+﻿
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sportika — Home</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="style.css" rel="stylesheet">
+
+    <style>
+        /* HERO SECTION */
+        .hero-section {
+            height: 90vh;
+            background: url("nikebanner11.jpg") center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.55);
+            top: 0;
+            left: 0;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+            .hero-content h1 {
+                font-size: 4rem;
+                font-weight: 800;
+            }
+
+            .hero-content p {
+                font-size: 1.3rem;
+                margin-bottom: 25px;
+            }
+
+        /* FULL WIDTH CATEGORY SECTIONS (HORIZONTAL) */
+        .full-categories-row {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .full-category {
+            position: relative;
+            height: 500px;
+            width: 50%;
+            overflow: hidden;
+        }
+
+            .full-category img {
+                width: 100%;
+                height: 200%;
+                object-fit: fill;
+                transition: transform .3s ease;
+            }
+
+            .full-category:hover img {
+                transform: scale(1.05);
+            }
+
+            .full-category .overlay {
+                position:relative;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.35);
+                top: 0;
+                left: 0;
+            }
+
+            .full-category .content {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                color: #fff;
+                text-align: center;
+            }
+
+                .full-category .content h2 {
+                    font-size: 2.5rem;
+                    font-weight: 700;
+                }
+
+                .full-category .content p {
+                    font-size: 1.2rem;
+                    margin-bottom: 15px;
+                }
+
+                .full-category .content a {
+                    background: #111;
+                    color: #fff;
+                    padding: 10px 25px;
+                    border-radius: 6px;
+                    text-decoration: none;
+                    font-weight: 600;
+                    transition: 0.3s;
+                }
+
+                    .full-category .content a:hover {
+                        background: #f39c12;
+                    }
+
+        /* SMALL CATEGORY CARDS */
+        .category-card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            transition: transform .3s ease, box-shadow .3s;
+        }
+
+            .category-card img {
+                width: 100%;
+                height: 400px;
+                
+            }
+
+            .category-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+            }
+
+            .category-card .card-body h5 {
+                font-weight: 600;
+            }
+
+            .category-card .card-body a {
+                background: #111;
+                color: #fff;
+                padding: 7px 15px;
+                border-radius: 6px;
+                text-decoration: none;
+                font-weight: 600;
+                transition: 0.3s;
+            }
+
+                .category-card .card-body a:hover {
+                    background: #f39c12;
+                }
+
+        footer {
+            margin-top: 50px;
+        }
+
+        /* PRODUCTS GRID */
+        .products-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+
+
+
+        .product-card {
+            width: 220px;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            background: #fff;
+            transition: 0.3s;
+        }
+
+            .product-card img {
+                width: 100%;
+                height: 220px;
+               
+            }
+
+            .product-card h4 {
+                padding: 10px;
+                font-size: 18px;
+                font-weight: 600;
+            }
+
+            .product-card p {
+                padding: 0 10px 10px;
+                font-size: 16px;
+                font-weight: 500;
+            }
+
+            .product-card button {
+                background: #111;
+                color: #fff;
+                border: none;
+                padding: 10px 15px;
+                width: 100%;
+                cursor: pointer;
+                font-weight: 600;
+                transition: 0.3s;
+            }
+
+                .product-card button:hover {
+                    background: #f39c12;
+                }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .full-category {
+                width: 100%;
+                height: 400px;
+            }
+
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-content p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold fs-3" href="index.html">Sportika</a>
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navmenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navmenu">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+                    <li class="nav-item"><a href="men.html" class="nav-link">Men</a></li>
+                    <li class="nav-item"><a href="women.html" class="nav-link">Women</a></li>
+                    <li class="nav-item"><a href="kids.html" class="nav-link">Kids</a></li>
+                    <li class="nav-item"><a href="most_selling.html" class="nav-link">Most Selling</a></li>
+                    <li class="nav-item ms-3">
+                        <a href="cart.html" class="nav-link fw-bold">
+                            Cart (<span id="cartCount">0</span>)
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Step Into The Future of Sportswear</h1>
+            <p>Premium Nike-inspired shoes & clothing — designed for athletes, dreamers, and champions.</p>
+            <a href="most_selling.html" class="btn btn-dark btn-lg px-4 py-2">Shop Now</a>
+        </div>
+    </section>
+
+    <!-- TWO BIG HORIZONTAL CATEGORIES -->
+    <section class="py-5">
+        <div class="container-fluid px-0 full-categories-row">
+            <div class="full-category">
+                <img src="nike_women_01.jpg" height="100%" alt="Nike Tech Women">
+                <div class="overlay"></div>
+                <div class="content">
+                    <h2>NIKE TECH WOMEN</h2>
+                    <p>BUILT TO MOVE DIFFERENT</p>
+                    <a href="nike_tech_women.html">Shop</a>
+                </div>
+            </div>
+            <div class="full-category">
+                <img src="running_man.jpg" alt="Run Anyway">
+                <div class="overlay"></div>
+                <div class="content">
+                    <h2>RUN ANYWAY</h2>
+                    <a href="run_anyway.html">Shop</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- THREE SMALL CATEGORIES -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card category-card shadow-sm">
+                        <img src="CEEDEE1.jpeg" alt="Basketball">
+                        <div class="card-body text-center">
+                            <h5>Basketball</h5>
+                            <a href="basketball.html">Shop</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card category-card shadow-sm">
+                        <img src="soccernew11.jpg" width="10" alt="Soccer">
+                        <div class="card-body text-center">
+                            <h5>Soccer</h5>
+                            <a href="soccer.html">Shop</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card category-card shadow-sm">
+                        <img src="skimsnew.jpg" alt="Skims">
+                        <div class="card-body text-center">
+                            <h5>Skims</h5>
+                            <a href="skims.html">Shop</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- SPOTLIGHT PRODUCTS SECTION -->
+    <section class="py-5 bg-light">
+        <div class="container text-center">
+            <h1 class="fw-bold">SPOTLIGHT</h1>
+            <p>Classic silhouettes and cutting-edge innovation to build your game from the ground up.</p>
+
+            <div class="products-container mt-4">
+                <div class="product-card">
+                    <img src="air_jordan_1.jpeg" alt="Air Jordan 1">
+                    <h4>Air Jordan 1</h4>
+                </div>
+                <div class="product-card">
+                    <img src="air_max.jpeg" alt="Air Max">
+                    <h4>Air Max</h4>
+                </div>
+                <div class="product-card">
+                    <img src="graphic_tees.jpeg" alt="Graphic Tees">
+                    <h4>Graphic Tees</h4>
+                </div>
+                <div class="product-card">
+                    <img src="dunk.jpeg" alt="Dunk">
+                    <h4>Dunk</h4>
+                </div>
+                <div class="product-card">
+                    <img src="air_force_1.jpeg" alt="Air Force 1">
+                    <h4>Air Force 1</h4>
+                </div>
+                <div class="product-card">
+                    <img src="24_7_collection.jpeg" alt="24.7 Collection">
+                    <h4>24.7 Collection</h4>
+                </div>
+                <div class="product-card">
+                    <img src="vomero_5.jpeg" alt="Vomero 5">
+                    <h4>Vomero 5</h4>
+                </div>
+                <div class="product-card">
+                    <img src="shox.jpeg" alt="Shox">
+                    <h4>Shox</h4>
+                </div>
+                <div class="product-card">
+                    <img src="acg.jpeg" alt="ACG">
+                    <h4>ACG</h4>
+                </div>
+                <div class="product-card">
+                    <img src="vomero_plus.jpeg" alt="Vomero Plus">
+                    <h4>Vomero Plus</h4>
+                </div>
+                <div class="product-card">
+                    <img src="pegasus_premium.jpeg" alt="Pegasus Premium">
+                    <h4>Pegasus Premium</h4>
+                </div>
+                <div class="product-card">
+                    <img src="fan_gear.jpeg" alt="Fan Gear">
+                    <h4>Fan Gear</h4>
+                </div>
+                <div class="product-card">
+                    <img src="jordan_retro.jpeg" alt="Jordan Retro">
+                    <h4>Jordan Retro</h4>
+                </div>
+                <div class="product-card">
+                    <img src="sabrina.jpeg" alt="Sabrina 3">
+                    <h4>Sabrina 3</h4>
+                </div>
+                <div class="product-card">
+                    <img src="rajuven_8.jpeg" alt="Rejuven8">
+                    <h4>Rejuven8</h4>
+                </div>
+                <div class="product-card">
+                    <img src="tatum_4.jpeg" alt="Tatum 4">
+                    <h4>Tatum 4</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-4 bg-light">
+        <div class="container text-center">
+            <small>© Sportika — University Project</small>
+        </div>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="cart.js"></script>
+
+    <!-- CART FUNCTIONALITY -->
+   
+
+</body>
+
+</html>
